@@ -1,6 +1,6 @@
 {
   "name": "@eirikb/normalize-html-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Normalization of DOM table rows - creates a matrix with duplicate cells based on rowspan and colspan",
   "main": "index.js",
   "scripts": {
@@ -14,11 +14,13 @@
     "dom",
     "table",
     "scraping",
-    "parsing",
     "rowspan",
     "colspan"
   ],
-  "author": "Eirik Brandtzæg <eirikb@eirikb.no>",
+  "author": {
+    "email": "eirikb@eirikb.no",
+    "name": "Eirik Brandtzæg"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eirikb/normalize-html-table/issues"

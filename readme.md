@@ -3,10 +3,10 @@
 Normalization of DOM table rows - creates a matrix with duplicate cells based on rowspan and colspan.  
 Handy for scraping and paring of Wikipedia tables.
 
-  * Vanialla DOM - *no dependencies*.
-  * Does one job only - *rowspan* and *colspan*.
+  * Vanilla DOM - **no dependencies**.
+  * Does one job only - **rowspan** and **colspan**.
   
- ### Usage
+### Usage
  
  ```bash
 npm i @eirikb/normalize-html-table
@@ -20,14 +20,23 @@ const rows = normalizeHtmlTable(table);
 console.log(rows);
 ```
 
-This will return a matrix or rows and cells. Each cell contains the `td` element.  
-Each row will have a property `row` attached to them, in case you need to reference the original `tr` element.
+This will return a matrix of rows and cells. Each cell contains the `td` element.  
+Each row will have a property `row` attached to them, in case you need to reference the original `tr` element.  
+E.g.,
+```js
+  console.log(rows[0].row); // tr element
+```
 
 ### Notes
 
-This library does not map to JavaScript Object, that's not the point of the library.  
-It does not know how your headers are formatted, and does not need to.  
-You must map it yourself. Example:
+This library will _not_:
+  * Map your table to a JavaScript object.
+  * Do anything with your headers.
+  * Convert cells to text.
+  * Support older browsers (you must transpile it).
+  
+All above can be solved by you, and does not fit into this library.
+E.g., converting to JavaScript object with cells turned into text can be done like this:  
 
 ```js
 function tableToJson(table) {
@@ -41,7 +50,4 @@ function tableToJson(table) {
 }
 ```
 
-This library will also not convert cell data to text, that is also up to you.  
-
-Library is not transpiled so it will only work in modern-ish browsers.  
-For nodejs use [jsdom](https://github.com/jsdom/jsdom).
+For nodejs support use [jsdom](https://github.com/jsdom/jsdom).
