@@ -1,7 +1,7 @@
 # normalize-html-table
 
 Normalization of DOM table rows - creates a matrix with duplicate cells based on rowspan and colspan.  
-Handy for scraping and paring of Wikipedia tables.
+Handy for scraping and parsing of Wikipedia tables.
 
   * Vanilla DOM - **no dependencies**.
   * Does one job only - **rowspan** and **colspan**.
