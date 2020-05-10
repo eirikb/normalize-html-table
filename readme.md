@@ -6,6 +6,10 @@ Handy for scraping and parsing of Wikipedia tables.
   * Vanilla DOM - **no dependencies**.
   * Does one job only - **rowspan** and **colspan**.
   
+  
+[![npm](https://img.shields.io/npm/v/@eirikb/normalize-html-table.svg)](https://npmjs.org/package/@eirikb/normalize-html-table)
+[![Build](https://github.com/eirikb/normalize-html-table/workflows/Build/badge.svg)](https://github.com/eirikb/normalize-html-table/actions?query=workflow%3ABuild)
+
 ### Usage
  
  ```bash
