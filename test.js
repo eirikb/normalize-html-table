@@ -1,6 +1,6 @@
-import test from 'ava';
-import browserEnv from 'browser-env';
-import normalizeHtmlTable from './index.js';
+const test = require('ava');
+const browserEnv = require('browser-env');
+const normalizeHtmlTable = require('./index.js');
 
 browserEnv();
 
